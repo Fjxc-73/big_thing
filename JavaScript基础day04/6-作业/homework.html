@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1. 写一个函数，用户输入任意两个数字的任意算术运算（简单的计算器小功能），并能弹出运算后的结果。
+    function getResult () { // opa表示的是运算符的一个形参
+      var n1 = +prompt('请输入第一个数字')
+      var n2 = +prompt('请输入第二个数字')
+      if (opa === '+') {
+        alert(n1 + n2)
+      } else if (opa === '-') {
+        alert(n1 - n2)
+      } else if (opa === 'x') {
+        alert(n1 * n2)
+      } else if (opa === '/') {
+      	if(n2==0){
+      		alert('除数不能0,请重新输入')
+      	}else{
+      		alert(n1 / n2)
+      	}
+      }
+    }
+    // 让一个程序灵活起来 实现可定制
+    // 通过实参传递
+    // 实参传递给形参 
+    // 实参：函数调用的时候（）中参数
+    // 形参：函数声明的时候的参数
+    // getResult('+')
+    getResult() 
+
+    // 2. 写一个函数，用户输入任意两个数字的最大值，并能出弹运算后的结果。
+   /*  function getMax (a, b) {
+      if (a > b) {
+        return a
+      } else {
+        return b
+      }
+    }
+    var result = getMax(12, 36)
+    alert(result) */
+
+    // 3. 写一个函数，用户输入任意三个不同数字的最大值，并能弹出运算后的结果
+    /* function getThreeMax () {
+      // arguments
+      // console.log(arguments) // [12, 65, 32]
+      var max = arguments[0]
+      for (var i = 0; i < arguments.length; i++) {
+        if (arguments[i] > max) {
+          max = arguments[i]
+        }
+      }
+      return max
+    }
+    alert(getThreeMax(12, 65, 32)) */
+
+    // 4. 写一个函数，用户输入一个数判断是否是素数，并返弹出回值(又叫质数，只能被1和自身整数的数)
+    /*function isZhiShu (num) {
+      for (var i = 2; i < num; i++) {
+        if (num % i === 0) {
+          return false
+        }
+      }
+      return true
+    }
+    console.log(isZhiShu(25))*/
+  </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1. 打印矩形
+    /* var str = ''
+    for (var i = 1; i <= 9; i++) {
+      for (var j = 1; j <= 9; j++) {
+        // str = str + '☆'
+        str += '☆'
+      }
+      str = str + '\n'
+    }
+    // i = 1
+    //  j = 1   str = '☆'
+    //  j = 2   str = '☆☆'
+    //  j = 3   str = '☆☆☆'
+    //  j = 9   str = '☆☆☆☆☆☆☆☆☆'
+    //  str = '☆☆☆☆☆☆☆☆☆\n'
+    // i = 2
+    //  str = '☆☆☆☆☆☆☆☆☆\n☆☆☆☆☆☆☆☆☆\n'
+    // i = 3
+    //  str = '☆☆☆☆☆☆☆☆☆\n☆☆☆☆☆☆☆☆☆\n☆☆☆☆☆☆☆☆☆\n'
+    // i = 9 ....
+    console.log(str) */
+    // 2. 打印一个正三角
+   /*  var str = ''
+    // 外层for循环控制行 内层for循环控制几列
+    for (var i = 1; i <= 9; i++) {
+      for (var j = 1; j <= i; j++) {
+        // str = str + '☆'
+        str += '☆'
+      }
+      str = str + '\n'
+    }
+    console.log(str) */
+    // i = 1
+    // for (var j = 1; j <= 1; j++) {
+    //   str = str + '☆'
+    // }
+    // str = str + '\n'
+    // str = '☆\n'
+    // i = 2
+    // for (var j = 1; j <= 2; j++) {
+    //   str = str + '☆'
+    // }
+    // str = str + '\n'
+    // str = '☆\n☆☆\n'
+
+    // 3. 9 * 9 乘法表
+    /* var str = ''
+    // 外层for循环控制行 内层for循环控制几列
+    for (var i = 1; i <= 9; i++) {
+      for (var j = 1; j <= i; j++) {
+        // str = str + '☆'
+        // str = str + '1x1=1\t'
+        str = str + j + 'x' + i + '=' + j*i + '\t'
+      }
+      str = str + '\n'
+    }
+    // i = 1
+    // for (var j = 1; j <= 1; j++) {
+    //   str = str + 1 + 'x' + 1 + '=' + 1 + '\t'  ==> str + '1x1=1' + '\t'
+    // }
+    // str = str + '\n' ==> '1x1=1\t\n'
+
+     // i = 2
+    // for (var j = 1; j <= 2; j++) {
+    //   str = str + 1 + 'x' + 2 + '=' + 2 + '\t'  ==> str + '1x2=2' + '\t'
+    // }
+    // j = 1 str = str + '\n' ==>'1x1=1\t\n 1x2=2\t\n'
+    // j = 2 str = str + '\n' ==>'1x1=1\t\n 1x2=2\t2x2=4\t\n'
+    console.log(str) */
+
+    // 4. ATM作业
+    var money = 100
+    var msg = +prompt('请输入您要的操作：\n 1.存钱\n 2.取钱\n 3.显示余额\n 4.退出')
+    // 什么情况下会结束循环
+    // if () {}
+    // 如果while的条件为false的时候会结束循环
+    // 当退出的时候 我们要结束循环 4
+    while (msg !== 4) {
+      // 如果用户输入的是 1 2 3 
+      if (msg === 1) {
+        // money = +prompt('请输入您要存的钱数') + money
+        money += +prompt('请输入您要存的钱数')
+      } else if (msg === 2) {
+        money -= +prompt('请输入您要取的钱数')
+      } else if (msg === 3) {
+        alert(money)
+      }
+      // 无论哪个条件成立都会重新询问
+      msg = +prompt('请输入您要的操作：\n 1.存钱\n 2.取钱\n 3.显示余额\n 4.退出')
+    }
+    alert('退出成功')
+  </script>
+</body>
+</html>

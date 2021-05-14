@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 判断这个年份是不是闰年 
+      /*  function isRunYear(y){
+            // 先假设这个年份不是的 
+            var flag = '不是闰年';
+
+            if(y % 4 == 0 && y % 100 !=0 || y % 400 == 0){
+                flag = '是闰年';
+            } 
+
+            return flag;
+        }
+
+        var res = isRunYear(2001);
+        console.log(res);*/
+
+        function isRunYear(y){
+            if(y % 4 == 0 && y % 100 !=0 || y % 400 == 0){
+                return true;
+            }else {
+                return false;
+            }
+        }
+
+        function backDay(){
+            // 得到一个年份 
+            var year = prompt('请输入4位数的年份');
+            var res = isRunYear(year);
+            
+            if(res){
+                console.log(29);
+            }else{
+                console.log(28);
+            }
+        }
+
+
+       backDay()
+
+
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

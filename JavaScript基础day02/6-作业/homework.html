@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. 用户输入几点弹出问候信息
+      /*  var message = +prompt('请输入时间？')
+    message = message % 24 // 如果25点 默认1点
+    if (message > 0 && message < 12) {
+      alert('上午好')
+    } else if (message === 12) {
+      alert('中午好')
+    } else if (message > 12 && message < 18) {
+      alert('下午好')
+    } else if (message === 18) {
+      alert('傍晚好')
+    } else if (message >18 && message < 23) {
+      alert('晚上好')
+    } else {
+      alert('深夜好')
+    } */
+
+      // 2. 比较两个数的最大值
+      /* var num1 = +prompt('请输入数字')
+    var num2 = +prompt('请输入数字')
+    if (num1 >= num2) {
+      alert(num1)
+    } else {
+      alert(num2)
+    } */
+
+      // 3. 判断奇偶性
+      /* var num3 = +prompt('请输入数字')
+    if (num3 % 2 === 0) {
+      alert('偶数')
+    } else {
+      alert('奇数')
+    } */
+
+      // 4. 判断星期
+      // 假设这个月1号是星期三，提示用户输入本月的日期（即1日-31日），返回用户输入的那一天是星期几
+      /* var num4 = +prompt('请输入数字');
+      if (num4 > 0 && num4 <=31) {
+        num4 = num4 % 7;
+        // 余数1表示 星期三 ...
+        switch (num4) {
+          case 1:
+            alert('星期三');
+            break;
+          case 2:
+            alert('星期4');
+            break;
+          case 3:
+            alert('星期5');
+            break;
+          case 4:
+            alert('星期6');
+            break;
+          case 5:
+            alert('星期日');
+            break;
+          case 6:
+            alert('星期1');
+            break;
+          default:
+            alert('星期2');
+            break;
+        }
+      } else {
+        alert('时间在1-31之间')
+      } */
+
+      // 6. 成绩表
+      // 分数转换,给一个分数，判定等级。大于等于90  A，大于等于80小于90  B，大于等于70小于80  C ，大于等于60小于70 D，小于60 E
+      var score = +prompt('请输入成绩');
+      // 这里建议你们使用if做 因为他是最合适的
+      score = parseInt(score / 10); // 70-79 ===> 7
+      switch (score) {
+        case 10:
+          alert('S');
+          break;
+        case 9:
+          alert('A');
+          break;
+        case 8:
+          alert('B');
+          break;
+        case 7:
+          alert('C');
+          break;
+        case 6:
+          alert('D');
+          break;
+        default:
+          alert('E');
+          break;
+      }
+    </script>
+  </body>
+</html>

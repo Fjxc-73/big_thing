@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var message = +prompt('请输入您要的操作：\n 1.存钱\n 2.取钱\n 3.显示余额\n 4.退出');
+      var money = 100;
+      while (true) {
+        if (message === 1) {
+          money += +prompt('请输入您要存的钱数');
+          alert(money);
+        } else if (message === 2) {
+          money -= +prompt('请输入您要取的钱数');
+          alert('您的余额为：' + money);
+        } else if (message === 3) {
+          alert('您的余额为：' + money);
+        }else{
+        	 alert('正在退出');
+        } 
+        // 无论哪种情况是哪个操作都会执行的
+        message = +prompt('请输入您要的操作：\n 1.存钱\n 2.取钱\n 3.显示余额\n 4.退出');
+      }
+   
+    </script>
+  </body>
+</html>
